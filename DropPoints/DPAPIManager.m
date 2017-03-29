@@ -39,7 +39,6 @@ NSString * _Nonnull kSuccess = @"OK";
 
 +(NSArray *)getNearbyListByLocation:(CLLocation *)location
                              radius:(NSNumber *)radius {
-  location = [[CLLocation alloc] initWithLatitude:40.730610 longitude:-73.935242];
   NSString *baseRequest = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f", location.coordinate.latitude, location.coordinate.longitude];
   
   baseRequest = [baseRequest appendHTTPRequestParameters:@{@"language" : @"iw",
